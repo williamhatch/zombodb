@@ -40,7 +40,14 @@ should do the trick.  You'll need to make sure that Postgres' `pg_config` comman
 ZomboDB defaults to zero Elasticsearch index replicas.  If you're installing for a production system you might consider setting `zdb.default_replicas` to a better value.
 
 You might also consider setting `zdb.default_elasticsearch_url`.
+/usr/local/var/postgres/postgresql.conf
 
+```
+# Add settings for extensions here
+zdb.default_elasticsearch_url = 'http://127.0.0.1:9200/'
+zdb.curl_verbose = true
+zdb.log_level = LOG
+```
 Both of these values can be set per index, so they're not strictly necessary to set in `postgresql.conf`.
 
 Make sure to read about ZomboDB's [configuration settings](CONFIGURATION-SETTINGS.md) and its [index options](INDEX-MANAGEMENT.md#with--options).

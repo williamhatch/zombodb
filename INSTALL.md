@@ -5,8 +5,8 @@ ZomboDB is a 100% native Postgres extension.  Additionally, ZomboDB is released 
 
 ## Prerequisites
 
-- Postgres 10.x installed
-- libcurl >= 7.28.0 installed
+- Postgres 10.x installed (check pg_config) 
+- libcurl >= 7.28.0 installed . (curl-config --version)
 - A 64bit Intel Architecture
 
 ### Installation on CentOS/RHEL
